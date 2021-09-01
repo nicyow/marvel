@@ -1,0 +1,96 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is the document spec",
+    "version": "1.0.0",
+    "title": "Marvel"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "character",
+      "description": "Everything about character"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/characters/{characterId}": {
+      "get": {
+        "tags": [
+          "character"
+        ],
+        "summary": "Find character by id",
+        "description": "Returns a single character",
+        "operationId": "getById",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "characterId",
+            "in": "path",
+            "description": "Id of character to return",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/Character"
+            }
+          },
+          "404": {
+            "description": "Character not found"
+          }
+        }
+      }
+    },
+    "/characters": {
+      "get": {
+        "tags": [
+          "character"
+        ],
+        "summary": "Get all character ids",
+        "description": "Returns an array of id",
+        "operationId": "get",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Character": {
+      "type": "object",
+      "properties": {
+        "Id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "Name": {
+          "type": "string"
+        },
+        "Description": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
