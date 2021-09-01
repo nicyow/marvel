@@ -17,6 +17,14 @@ docker-compose build --no-cache
 docker-compose up -d --remove-orphans
 ```
 
+### API endpoint
+ - http://localhost:8080/characters 
+ - http://localhost:8080/characters/:id
+
+### Swagger document
+ - http://localhost:8080/swagger/api-docs 
+
+
 ## Unit Test
 
 ```bash
