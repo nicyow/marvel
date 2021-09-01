@@ -9,13 +9,6 @@ Project serving RESTful APIs using Node.js, Express, redis and Nginx
 
 ## Getting Started
 
-#### Clone the repo and make it yours:
-
-```bash
-git clone https://github.com/nicyow/marvel.git
-cd marvel-app
-```
-
 #### Bring up all service:
 
 ```bash
