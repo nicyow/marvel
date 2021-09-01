@@ -6,14 +6,6 @@
 
 ## Getting Started
 
-#### Clone the repo and make it yours:
-
-```bash
-git clone https://github.com/nicyow/marvel.git
-cd marvel-app
-rm -rf .git
-```
-
 #### Install dependencies:
 
 ```bash
